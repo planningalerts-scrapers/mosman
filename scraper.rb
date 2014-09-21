@@ -17,6 +17,7 @@ page.search('.result').each do |app|
   record[:date_received] = Date.strptime(app.children[6].to_s.split(":")[1].strip, '%d/%m/%Y')
   record[:address] = app.children[8].to_s.split(":")[1].strip + ", Mosman, NSW"
   record[:council_reference] = app.children[1].text.to_s
+  record[:date_scraped] = Date.today.to_s
 
   # if (ScraperWiki.select("* from data where `council_reference`='#{record[:council_reference]}'").empty? rescue true)
     ScraperWiki.save_sqlite([:council_reference], record)
