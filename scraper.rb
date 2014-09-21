@@ -14,7 +14,7 @@ page.search('.result').each do |app|
   record[:info_url] = "http://portal.mosman.nsw.gov.au/pages/xc.track/" + app.children[1]['href']
   record[:comment_url] = "http://portal.mosman.nsw.gov.au/pages/xc.track/" + app.children[1]['href']
   record[:description] = app.children[4].to_s
-  record[:date_received] = app.children[6].to_s.split(":")[1].strip
+  record[:date_received] = Date.strptime(app.children[6].to_s.split(":")[1].strip, '%d/%m/%Y')
   record[:address] = app.children[8].to_s.split(":")[1].strip + ", Mosman, NSW"
   record[:council_reference] = app.children[1].text.to_s
 
