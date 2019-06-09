@@ -1,23 +1,11 @@
-require 'scraperwiki'
-require 'date'
-require 'mechanize'
+require "icon_scraper"
 
-agent = Mechanize.new
-url = "http://portal.mosman.nsw.gov.au/pages/xc.track/SearchApplication.aspx?d=last14days&t=8,5&k=LodgementDate"
-
-page = agent.get(url)
-page.search('.result').each do |app|
-  app.search('span').remove if app.search('span').length > 0
-
-  record = { }
-
-  record[:council_reference] = app.children[1].text.to_s
-  record[:description] = app.children[4].to_s
-  record[:date_received] = Date.strptime(app.children[6].to_s.split(":")[1].strip, '%d/%m/%Y')
-  record[:address] = app.children[8].to_s.split(":")[1].strip + ", Mosman, NSW"
-  record[:date_scraped] = Date.today.to_s
-  record[:info_url] = "http://portal.mosman.nsw.gov.au/pages/xc.track/" + app.children[1]['href']
-
-  ScraperWiki.save_sqlite([:council_reference], record)
-
+IconScraper.scrape_with_params(
+  url: "http://portal.mosman.nsw.gov.au",
+  period: "last14days",
+  types: [8, 5]
+) do |record|
+  record["info_url"] = record["info_url"].gsub("/Pages/XC.Track/", "/pages/xc.track/")
+  record["address"] = record["address"].gsub("MOSMAN NSW 2088", "Mosman, NSW")
+  IconScraper.save(record)
 end
