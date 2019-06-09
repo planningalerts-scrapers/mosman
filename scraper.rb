@@ -3,7 +3,7 @@ require 'date'
 require 'mechanize'
 
 agent = Mechanize.new
-url = "http://portal.mosman.nsw.gov.au/pages/xc.track/SearchApplication.aspx?d=thismonth&t=8,5&k=LodgementDate"
+url = "http://portal.mosman.nsw.gov.au/pages/xc.track/SearchApplication.aspx?d=last14days&t=8,5&k=LodgementDate"
 
 page = agent.get(url)
 page.search('.result').each do |app|

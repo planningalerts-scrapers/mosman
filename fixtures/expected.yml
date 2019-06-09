@@ -19,6 +19,27 @@
   address: 21 Silex Road, Mosman, NSW
   council_reference: '008.2018.00000254.002 '
   date_scraped: '2019-05-15'
+- info_url: 'http://portal.mosman.nsw.gov.au/pages/xc.track/SearchApplication.aspx?id=008.2019.00000066.001 '
+  description: 'Development Application - Alteration and addition to a dwelling house,
+    construction of a swimming pool and landscaping works '
+  date_received: '2019-05-29'
+  address: 92 Prince Albert Street, Mosman, NSW
+  council_reference: '008.2019.00000066.001 '
+  date_scraped: '2019-05-15'
+- info_url: 'http://portal.mosman.nsw.gov.au/pages/xc.track/SearchApplication.aspx?id=008.2019.00000067.001 '
+  description: 'Development Application - Alteration and addition to a dwelling house
+    comprising minor addition to the living room on the ground level '
+  date_received: '2019-05-30'
+  address: 19 Redan Street, Mosman, NSW
+  council_reference: '008.2019.00000067.001 '
+  date_scraped: '2019-05-15'
+- info_url: 'http://portal.mosman.nsw.gov.au/pages/xc.track/SearchApplication.aspx?id=008.2019.00000068.001 '
+  description: 'Development Application - Construction of a swimming pool at the rear
+    of the property '
+  date_received: '2019-05-30'
+  address: 19 Lennox Street, Mosman, NSW
+  council_reference: '008.2019.00000068.001 '
+  date_scraped: '2019-05-15'
 - info_url: 'http://portal.mosman.nsw.gov.au/pages/xc.track/SearchApplication.aspx?id=008.2019.00000069.001 '
   description: 'Development Application - Alterations ans additions '
   date_received: '2019-06-04'
@@ -36,7 +57,7 @@
 - info_url: 'http://portal.mosman.nsw.gov.au/pages/xc.track/SearchApplication.aspx?id=008.2019.00000071.001 '
   description: 'Development Application - Alterations and additions to the lower and
     ground floors of a dwelling house and reconstruction of driveway '
-  date_received: '2019-06-05'
+  date_received: '2019-06-06'
   address: 84 Bay Street, Mosman, NSW
   council_reference: '008.2019.00000071.001 '
   date_scraped: '2019-05-15'
